@@ -19,6 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
 
+    <script src="script.js"></script>
+
     <link rel="stylesheet" href="https://peddiecs.peddie.org/main.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://peddiecs.peddie.org/favicon.ico">
@@ -90,10 +92,40 @@
 
                 <!-- tab content -->
                 <div id="pace" class="tabcontent" style="display:block">
-                    <p>pace</p>
+                    <h3>Time</h3>
+                    <div class="time-in">
+                        <input type="number" id="time-hr" onchange="setTime()" min=0 step="1" placeholder="hr">
+                        <p>:</p>
+                        <input type="number" id="time-min" onchange="setTime()" min=0 step="1" placeholder="min">
+                        <p>:</p>
+                        <input type="number" id="time-sec" onchange="setTime()" min=0 placeholder="sec">
+                    </div>
+                    <h3>Distance</h3>
+                    <div class="dist-in">
+                        <input type="number" id="pace-dist" onchange="setDist()" min=0 step="1">
+                        <button class="unit-button" onclick="changeUnit(); calcPace()">Yards</button>
+                    </div>
+                    <div class="select">
+                        <div class="tab">
+                            <button class="split-button tablinks active" onclick="setSplit(event, 50)">50 Yards</button>
+                            <button class="split-button tablinks" onclick="setSplit(event, 100)">100 Yards</button>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>Pace</h3>
+                    <div class="time-in">
+                        <input type="number" id="pace-min" placeholder="min" readonly>
+                        <p>:</p>
+                        <input type="number" id="pace-sec" placeholder="sec" readonly>
+                        <p>.</p>
+                        <input type="number" id="pace-ms" placeholder="ms" readonly>
+                        <input type="number" class="speed" id="pace-speed" placeholder="speed" readonly>
+                        <p></p><h3>m/s</h3>
+                    </div>
                 </div>
+
                 <div id="time" class="tabcontent">
-                    <p>time</p>
+                    <h3>Time</h3>
                 </div>
                 <div id="dist" class="tabcontent">
                     <p>dist</p>

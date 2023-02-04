@@ -1,7 +1,7 @@
 .calculator {
     display: grid;
-    width:80vw;
-    height:400px;
+    width:fit-content;
+    height:auto;
     margin:auto;
     background-color: var(--navbar);
     border-radius: 15px;
@@ -10,14 +10,14 @@
 
     padding:10px;
 
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: auto;
 }
 
 .calculator .default{
     grid-row:1;
     grid-column:1;
 
-    width:100%;
+    width:300px;
 } 
 
 .calculator h2 {
@@ -29,11 +29,80 @@
     padding: 0px;
 }
 
+.calculator h3 {
+    text-align: left;
+    font-family: 'Raleway', serif;
+    font-size: 18px;
+    color: var(--text);
+    font-weight: bold;
+    margin-bottom:0;
+    padding:0;
+}
+
+.calculator p{
+    text-align: center;
+    font-family: 'Raleway', serif;
+    font-size: 18px;
+    color: var(--text);
+    font-weight: bold;
+    margin-bottom:0;
+    padding:0;
+}
+
+.time-in{
+    width:100%;
+    display: grid;
+    grid-template-columns: 30% 5% 30% 5% 30%;
+    margin-bottom: 10px;
+}
+
+.time-in .speed{
+    grid-row:2;
+    grid-column: 1 / 4;
+    margin-top: 5px;
+}
+.time-in h3{
+    text-align:center;
+    align-self: end;
+    justify-self: left;
+    margin-bottom: 0.1rem;
+}
+
+.dist-in{
+    width:100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap:10px;
+    margin-bottom: 10px;
+}
+
+.unit-button{
+    background-color: var(--background);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    font-family: 'Raleway', serif;
+    font-size: 16px;
+    color: var(--text);
+}
+
+.split-button {
+    width:50% !important;
+}
+
+input{
+    width:100%;
+    text-align: right;
+}
+
 
 /*all of the stuff for selection boxes, copied from members/style.css*/
 :root {
     /*Color variables*/
-    --tab-hover: #ccc;
+    --tab-hover: #bbb;
     --tab-select: #ddd;
     --tab: #00000000;
 }
