@@ -1,2 +1,2 @@
 # Pace-Calculator
-Swimming Pace calculator b/c my coaches cam
+Just a pretty standard swimming pace-calculator app put into a webpage
